@@ -18,22 +18,28 @@ struct ContentView: View {
             if answerNumber == 0 {
                 Text("これからじゃんけんをします")
             } else if answerNumber == 1 {
+                Image("gu")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("グー")
                 
             } else if answerNumber == 2 {
+                Image("choki")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("チョキ")
                 
             } else {
-                
+                Image("pa")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("パー")
             }
             
-            Image("gu")
-                
-                .resizable()
-                
-                .aspectRatio(contentMode: .fit)
-            Text("グー")
+            
             
             Button(action: {
-                print("タップされたよ！")
+                answerNumber = answerNumber + 1
             }) {
                 Text("じゃんけんをする！")
             }
