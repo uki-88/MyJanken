@@ -15,25 +15,35 @@ struct ContentView: View {
         
         VStack {
             
+            Spacer()
+            
             if answerNumber == 0 {
                 Text("これからじゃんけんをします")
+                    .padding(.bottom)
+                
             } else if answerNumber == 1 {
                 Image("gu")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                Spacer()
                 Text("グー")
+                    .padding(.bottom)
                 
             } else if answerNumber == 2 {
                 Image("choki")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                Spacer()
                 Text("チョキ")
+                    .padding(.bottom)
                 
             } else {
                 Image("pa")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                Spacer()
                 Text("パー")
+                    .padding(.bottom)
             }
             
             
@@ -51,6 +61,11 @@ struct ContentView: View {
                 
             }) {
                 Text("じゃんけんをする！")
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .background(Color.pink)
+                    .foregroundColor(Color.white)
             }
         }
         
