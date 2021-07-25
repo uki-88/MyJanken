@@ -8,16 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var answerNumber = 0
+    
     var body: some View {
         
         VStack {
-            //グー画像を指定
+            
+            if answerNumber == 0 {
+                Text("これからじゃんけんをします")
+            } else if answerNumber == 1 {
+                
+            } else if answerNumber == 2 {
+                
+            } else {
+                
+            }
+            
             Image("gu")
-                //リサイズを指定
+                
                 .resizable()
-                //画面内に収まるように、アスペクト比（縦横比）を維持する指定
+                
                 .aspectRatio(contentMode: .fit)
             Text("グー")
+            
             Button(action: {
                 print("タップされたよ！")
             }) {
