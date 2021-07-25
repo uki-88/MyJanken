@@ -18,6 +18,11 @@ struct ContentView: View {
                 //画面内に収まるように、アスペクト比（縦横比）を維持する指定
                 .aspectRatio(contentMode: .fit)
             Text("グー")
+            Button(action: {
+                print("タップされたよ！")
+            }) {
+                Text("じゃんけんをする！")
+            }
         }
         
        
